@@ -1,10 +1,8 @@
-/* Estilo para procesos vencidos */
 .vencido {
-    background-color: #FF0000; /* Fondo rojo para procesos vencidos */
-    color: #FFFFFF; /* Texto blanco para procesos vencidos */
+  background-color: #FF0000; /* Fondo rojo para procesos vencidos */
+  color: #FFFFFF; /* Texto blanco para procesos vencidos */
 }
 
-/* Estilo para procesos próximos a vencer */
 .proxima {
-    background-color: #FFFF00; /* Fondo amarillo para procesos próximos a vencer */
+  background-color: #FFFF00; /* Fondo amarillo para procesos próximos a vencer */
 }
