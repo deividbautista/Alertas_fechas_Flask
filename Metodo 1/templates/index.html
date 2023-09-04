@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Procesos</title>
+    <link rel="stylesheet" href="../static/Style.css">
+</head>
+<body>
+    <h1>Lista de Procesos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Proceso</th>
+                <th>Fecha Límite</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for proceso in procesos %}
+                <tr class="{% if proceso.fecha_limite <= hoy %}vencido{% elif proceso.fecha_limite <= proximo %}proxima{% endif %}">
+                    <td>{{ proceso.nombre }}</td>
+                    <td>{{ proceso.fecha_limite }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
