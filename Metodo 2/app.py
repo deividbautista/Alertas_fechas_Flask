@@ -8,7 +8,7 @@ procesos = [
     {"nombre": "Proceso 1", "fecha_inicio": date(2023, 9, 1), "fecha_limite": date(2023, 9, 10)},
     {"nombre": "Proceso 2", "fecha_inicio": date(2023, 8, 25), "fecha_limite": date(2023, 9, 15)},
     {"nombre": "Proceso 3", "fecha_inicio": date(2023, 9, 3), "fecha_limite": date(2023, 9, 5)},
-    {"nombre": "Proceso 4", "fecha_inicio": date(2023, 8, 28), "fecha_limite": date(2023, 9, 25)},
+    {"nombre": "Proceso 4", "fecha_inicio": date(2023, 8, 28), "fecha_limite": date(2023, 10, 25)},
 ]
 
 umbral_maximo_dias = 30
@@ -17,12 +17,15 @@ for proceso in procesos:
     diferencia = proceso["fecha_limite"] - proceso["fecha_inicio"]
     
     progreso = 1.0 - min(diferencia.days / umbral_maximo_dias, 1.0)
+
+    if progreso <= 0:
+        progreso = 0.01
     
     # Redondear el valor de progreso a un número entero
     proceso["diferencia_dias"] = diferencia.days
     proceso["progreso"] = round(progreso * 100)
 
-    
+
 # Ruta para mostrar la lista de procesos
 @app.route('/')
 def lista_de_procesos():
