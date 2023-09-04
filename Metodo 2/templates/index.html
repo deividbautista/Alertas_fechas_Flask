@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de Procesos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>Lista de Procesos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Proceso</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Límite</th>
+                <th>Progreso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- {% for proceso in procesos %}
+            <tr>
+                <td>{{ proceso.nombre }}</td>
+                <td>{{ proceso.fecha_inicio }}</td>
+                <td>{{ proceso.fecha_limite }}</td>
+                <td>
+                    <progress
+                        value="{% if proceso.fecha_limite > hoy %}{{ ((hoy - proceso.fecha_inicio).days / (proceso.fecha_limite - proceso.fecha_inicio).days) * 100 }}{% else %}100{% endif %}"
+                        max="100"></progress>
+                </td>
+            </tr>
+            {% endfor %} -->
+
+            {% for proceso in procesos %}
+            <tr>
+                <td>{{ proceso.nombre }}</td>
+                <td>{{ proceso.fecha_inicio }}</td>
+                <td>{{ proceso.fecha_limite }}</td>
+                <td>{{ proceso.diferencia_dias }}</td>
+                <td>{{ proceso.progreso }}</td>
+                <td>
+                    <progress
+                        value="{{proceso.progreso}}"
+                        min="0" max="100"></progress>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
