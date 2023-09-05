@@ -1,0 +1,34 @@
+progress {
+    min-width: 100px;
+    max-width: 150px;
+}
+
+progress[value] {
+    appearance: none;
+}
+
+progress[value]::-webkit-progress-bar{
+    border-radius: 15px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value{
+    border-radius: 15px;
+}
+
+/* Estilo para progreso menor o igual al 30% */
+.progress-low::-webkit-progress-value {
+    background-color: red;
+}
+
+/* Estilo para progreso entre 31% y 70% */
+.progress-medium::-webkit-progress-value {
+    background-color: yellow;
+}
+
+/* Estilo para progreso mayor al 70% */
+.progress-high::-webkit-progress-value {
+    background-color: green;
+}
+

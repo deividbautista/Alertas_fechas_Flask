@@ -3,7 +3,7 @@
 
 <head>
     <title>Lista de Procesos</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Style.css') }}">
 </head>
 
 <body>
@@ -41,7 +41,8 @@
                 <td>
                     <progress
                         value="{{proceso.progreso}}"
-                        min="10" max="100"></progress>
+                        min="10" max="100"
+                        class="{% if proceso.progreso <= 30 %}progress-low{% elif proceso.progreso <= 70 %}progress-medium{% else %}progress-high{% endif %}"></progress>
                 </td>
             </tr>
             {% endfor %}
