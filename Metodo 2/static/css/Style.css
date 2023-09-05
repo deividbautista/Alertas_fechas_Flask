@@ -1,25 +1,13 @@
-/*
-  El presente proyecto data de un modelo para alertar sobre la 
-  proximidad por fechas implementado de proyectos que necesiten 
-  de distintas formas de alertar o visualizar la progreción del tiempo
-
-  Todos los derechos reservados.
-  Copyright © 2023 Deivid Edwuar Bautista Ocampo - Jhonatan David Florez Useche 
-*/
-progress {
-    min-width: 100px;
-    max-width: 150px;
-}
-
 progress[value] {
     appearance: none;
 }
 
 progress[value]::-webkit-progress-bar{
     overflow: hidden;
+    width: 200px;
     border-radius: 15px;
-    background-color: aliceblue;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    background-color: rgb(247, 249, 252);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 progress[value]::-webkit-progress-value{
@@ -28,16 +16,17 @@ progress[value]::-webkit-progress-value{
 
 /* Estilo para progreso menor o igual al 30% */
 .progress-low::-webkit-progress-value {
-    background-color: red;
+    background-color: #ACFADF;
 }
 
 /* Estilo para progreso entre 31% y 70% */
 .progress-medium::-webkit-progress-value {
-    background-color: yellow;
+    background-color: #94ADD7;
 }
 
 /* Estilo para progreso mayor al 70% */
 .progress-high::-webkit-progress-value {
-    background-color: green;
+    background-color: #7C73C0;
 }
+
 

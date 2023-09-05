@@ -5,6 +5,7 @@
 # Todos los derechos reservados.
 # Copyright © 2023 Deivid Edwuar Bautista Ocampo - Jhonatan David Florez Useche
 
+
 # Importar los distintos modulos que utilizaremos en este metodo número 2
 from flask import Flask, render_template
 from datetime import date, timedelta
@@ -27,8 +28,7 @@ for proceso in procesos:
     progreso = 1.0 - min(diferencia.days / umbral_maximo_dias, 1.0)
 
     if progreso <= 0:
-        progreso = 0.01
-    
+        progreso = 0.03
     # Redondear el valor de progreso a un número entero
     proceso["diferencia_dias"] = diferencia.days
     proceso["progreso"] = round(progreso * 100)
