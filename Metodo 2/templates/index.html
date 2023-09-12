@@ -26,22 +26,10 @@
             </tr>
         </thead>
         <tbody>
-            <!-- {% for proceso in procesos %}
-            <tr>
-                <td>{{ proceso.nombre }}</td>
-                <td>{{ proceso.fecha_inicio }}</td>
-                <td>{{ proceso.fecha_limite }}</td>
-                <td>
-                    <progress
-                        value="{% if proceso.fecha_limite > hoy %}{{ ((hoy - proceso.fecha_inicio).days / (proceso.fecha_limite - proceso.fecha_inicio).days) * 100 }}{% else %}100{% endif %}"
-                        max="100"></progress>
-                </td>
-            </tr>
-            {% endfor %} -->
 
-            {% for proceso in procesos %}
+            {% for proceso in data %}
             <tr>
-                <td>{{ proceso.nombre }}</td>
+                <td>{{ proceso.Titulo }}</td>
                 <td>{{ proceso.fecha_inicio }}</td>
                 <td>{{ proceso.fecha_limite }}</td>
                 <td>{{ proceso.diferencia_dias }}</td>
@@ -54,6 +42,7 @@
                 </td>
             </tr>
             {% endfor %}
+
         </tbody>
     </table>
 </body>

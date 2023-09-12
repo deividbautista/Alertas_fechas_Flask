@@ -2,6 +2,15 @@ progress[value] {
     appearance: none;
 }
 
+/* progress[value]::-webkit-progress-bar{
+    overflow: hidden;
+    width: 800px;
+    height: 4px;
+    border-radius: 15px;
+    background-color: rgb(150, 155, 161);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25) inset;
+} */
+
 progress[value]::-webkit-progress-bar{
     overflow: hidden;
     width: 200px;
