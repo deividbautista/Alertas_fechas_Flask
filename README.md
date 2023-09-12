@@ -12,7 +12,7 @@ In the following repository, different forms for alerts will be observed accordi
 
 El presente proyecto data de un modelo para alertar sobre la proximidad por fechas implementado de proyectos que necesiten de distintas formas de alertar o visualizar la progreción del tiempo Todos los derechos reservados.
 
-Copyright © 2023 Deivid Edwuar Bautista - Jhonatan David Florez
+Copyright © 2023 Deivid Edwuar Bautista Ocampo - Jhonatan David Florez Useche
 
 ## Repositorio
 
