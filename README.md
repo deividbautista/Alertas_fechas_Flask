@@ -1,5 +1,30 @@
 # Alertas_fechas_Flask
 In the following repository, different forms for alerts will be observed according to dates in flask //En el siguiente repositorio se observarán diferentes formularios de alertas según fechas en matraz.
+## Autoría
+
+- **Deivid Edwuar Bautista**
+  - Correo Electrónico: debautistaocampo@gmail.com
+
+- **Jhonattan David Florez**
+  - Correo Electrónico: florezj328@gmail.com
+
+## Licencia
+
+El presente proyecto data de un modelo para alertar sobre la proximidad por fechas implementado de proyectos que necesiten de distintas formas de alertar o visualizar la progreción del tiempo Todos los derechos reservados.
+
+Copyright © 2023 Deivid Edwuar Bautista - Jhonatan David Florez
+
+## Repositorio
+
+
+
+## Contacto
+
+Para obtener más información sobre el proyecto o para contactar a los desarrolladores, puedes enviar un correo electrónico a los siguientes correos electrónicos:
+
+- Deivid Bautista Ocampo: debautistaocampo@gmail.com
+- Jhonattan David Florez: florezj328@gmail.com
+
 
 ## Requisitos previos
 * Python [python download](https://www.python.org/downloads/release/python-31010/)
